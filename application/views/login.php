@@ -17,7 +17,7 @@
           <div class="card">
             <div class="card-body">
               <form>
-                <h3>LOGIN</h3>
+                <h3 class="text-center">LOGIN</h3>
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Username</label>
                   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">

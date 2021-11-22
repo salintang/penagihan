@@ -83,20 +83,41 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="pages/gallery.html" class="nav-link">
+            <a href="<?= base_url(); ?>dashboard" class="nav-link">
               <i class="nav-icon far fa-image"></i>
               <p>
                 Dashboard
               </p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="customer" class="nav-link">
-              <i class="nav-icon far fa-image"></i>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link ">
+              <i class="nav-icon fas fa-store-alt"></i>
               <p>
                 Customer
+                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
+            <ul class="nav nav-treeview pl-3">
+              <li class="nav-item">
+                <a href="<?= base_url(); ?>customer/pasien" class="nav-link">
+                  <i class="nav-icon far fa-image"></i>
+                  <p>
+                    Data Pasien
+                  </p>
+                </a>
+              </li>
+            </ul>
+            <ul class="nav nav-treeview pl-3">
+              <li class="nav-item">
+                <a href="customer" class="nav-link">
+                  <i class="nav-icon far fa-image"></i>
+                  <p>
+                    Data Perusahaan
+                  </p>
+                </a>
+              </li>
+            </ul>
           </li>
           <li class="nav-item">
             <a href="customer" class="nav-link">
@@ -128,7 +149,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Dashboard</h1>
+            <!-- <h1 class="m-0"><?= $title; ?></h1> -->
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -144,7 +165,9 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-        <?= $title; ?>
+        <?php
+          $this->load->view($content);
+        ?>
         <!-- /.row (main row) -->
       </div><!-- /.container-fluid -->
     </section>
@@ -172,12 +195,12 @@
 <!-- Bootstrap 4 -->
 <script src="<?= base_url(); ?>assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-<script src="<?= base_url(); ?>assets/plugins/moment/moment.min.js"></script>
 <script src="<?= base_url(); ?>assets/plugins/daterangepicker/daterangepicker.js"></script>
 <!-- overlayScrollbars -->
 <script src="<?= base_url(); ?>assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
 <script src="<?= base_url(); ?>assets/dist/js/adminlte.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <!-- AdminLTE for demo purposes -->
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 </body>
