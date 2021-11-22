@@ -99,6 +99,14 @@
             </a>
           </li>
           <li class="nav-item">
+            <a href="customer" class="nav-link">
+              <i class="nav-icon far fa-image"></i>
+              <p>
+                Layanan
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="pages/gallery.html" class="nav-link">
               <i class="nav-icon far fa-image"></i>
               <p>
